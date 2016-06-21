@@ -1,6 +1,8 @@
 <h1>Chat rooms</h1>
 
-Hello
+<% if user_signed_in? %>
+   <li><li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+<% end  %>
 <p class="lead"><%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-primary' %></p>
 
 <ul>

@@ -4,6 +4,14 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  BootstrapNavbar.configure do |config|
+    config.bootstrap_version = '3.0.0'
+  end
+
+  BootstrapNavbar.configure do |config|
+    config.current_url_method = 'request.original_url'
+  end
+  
   config.cache_classes = false
 
   # Do not eager load code on boot.
